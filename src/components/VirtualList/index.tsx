@@ -95,12 +95,12 @@ const VirtualList: FC<P> = props => {
     <div className="list-wraper" ref={wraper} style={{ height }}>
       <div style={{ paddingTop: `${offset.current.startOffset}px`, paddingBottom: `${offset.current.endOffset}px` }}>
         {visibleData.map((ele, index) => {
-          // return renderItem(ele, offset.current.startIndex + index)
-          return (
-            <p className="ppp" key={offset.current.startIndex + index}>
-              {ele.txt}
-            </p>
-          )
+          return renderItem(ele, offset.current.startIndex + index)
+          // return (
+          //   <p className="ppp" key={offset.current.startIndex + index}>
+          //     {ele.txt}
+          //   </p>
+          // )
         })}
       </div>
     </div>

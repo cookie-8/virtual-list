@@ -44,9 +44,9 @@ class Index extends Component<P, S> {
   //     // 接口请求成功
   // }
 
-  renderItem = (item: any, index) => {
+  renderItem = (item: any, index:any) => {
     // console.log(item)
-    return <div key={index}>{item.txt}</div>
+    return <div className="item" key={index}>{item.txt}</div>
   }
 
   render() {
@@ -56,7 +56,7 @@ class Index extends Component<P, S> {
         <div className={cx('text')}>Index</div>
         <VirtualList
           itemSize={30}
-          height={160}
+          height={600}
           dataSource={data}
           bufferSize={5}
           renderItem={this.renderItem}
